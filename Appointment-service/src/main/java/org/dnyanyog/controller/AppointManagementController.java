@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AppintManagementController {
+public class AppointManagementController {
 
   @Autowired AppointmentServiceImpl appointmentService;
 
@@ -25,15 +25,15 @@ public class AppintManagementController {
   }
 
   @GetMapping(
-      path = "/api/v1/appointment/{patient_id}")
-  public AppointmentResponse getSingleappointment(@PathVariable long patient_id)  {
-    return appointmentService.getSingleappointment(patient_id);
+      path = "/api/v1/appointment/{appointment_id}")
+  public AppointmentResponse getSingleappointment(@PathVariable long appointment_id)  {
+    return appointmentService.getSingleappointment(appointment_id);
   }
   
   @PostMapping(
-	      path = "/api/v1/appointment/{patient_id}")
-  public AppointmentResponse Updateappointment(@PathVariable long patient_id, @RequestBody AppointmentRequest request) {
-	    return appointmentService.Updateappointment(patient_id,request);
+	      path = "/api/v1/appointment/{appointment_id}")
+  public AppointmentResponse Updateappointment(@PathVariable long appointment_id, @RequestBody AppointmentRequest request) {
+	    return appointmentService.Updateappointment(appointment_id,request);
 	  }
   
   @DeleteMapping(

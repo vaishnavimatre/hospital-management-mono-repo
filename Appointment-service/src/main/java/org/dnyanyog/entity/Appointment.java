@@ -14,54 +14,67 @@ import jakarta.persistence.Table;
 @Table
 @Component
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Appointment {
+public class  Appointment  {
 
-  @GeneratedValue @Id @Column private long patient_id;
+  @Column private String patientid;
 
-  @Column private String patient_name;
+  @Column(nullable = false, insertable = true, updatable = false, length = 50)
+  private String patient_name;
 
-  @Column private long appointment_id;
+  @GeneratedValue
+  @Id
+  @Column(name = "appointmentId", nullable = false, insertable = true, updatable = false)
+  private long appointment_id;
 
   @Column private String examination_date;
   @Column private String appointment_time;
+
+  public static Appointment getInstanace() {
+    return new Appointment();
+  }
 
   public String getPatient_name() {
     return patient_name;
   }
 
-  public void setPatient_name(String patient_name) {
+  public Appointment setPatient_name(String patient_name) {
     this.patient_name = patient_name;
+    return this;
   }
 
-  public long getPatient_id() {
-    return patient_id;
+  public String getPatientid() {
+    return patientid;
   }
 
-  public void setPatient_id(long patient_id) {
-    this.patient_id = patient_id;
+  public  Appointment setPatientid(String patientid) {
+    this.patientid = patientid;
+    return this;
   }
 
   public long getAppointment_id() {
     return appointment_id;
   }
 
-  public void setAppointment_id(long appointment_id) {
+  public  Appointment  setAppointment_id(long appointment_id) {
     this.appointment_id = appointment_id;
+    return this;
   }
 
   public String getExamination_date() {
     return examination_date;
   }
 
-  public void setExamination_date(String examination_date) {
+  public Appointment setExamination_date(String examination_date) {
     this.examination_date = examination_date;
+    return this;
   }
 
   public String getAppointment_time() {
     return appointment_time;
   }
 
-  public void setAppointment_time(String appointment_time) {
+  public Appointment setAppointment_time(String appointment_time) {
     this.appointment_time = appointment_time;
+    return this;
   }
 }
