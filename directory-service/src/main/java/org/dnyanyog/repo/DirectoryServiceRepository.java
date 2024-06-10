@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Component
 public interface DirectoryServiceRepository extends JpaRepository<Directory, Long> {
-  List<Directory> findBymobno(Long mobno);
+  List<Directory> findBymobno(String mobno);
 }

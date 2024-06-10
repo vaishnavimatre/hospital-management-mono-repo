@@ -1,119 +1,158 @@
 package org.dnyanyog.service;
 
+import java.nio.charset.StandardCharsets;
+
+import java.util.Base64;
+import java.util.List;
 import java.util.Optional;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 
 import org.dnyanyog.dto.DirectoryServiceRequest;
 import org.dnyanyog.dto.DirectoryServiceResponse;
-import org.dnyanyog.encrypt.EncryptionUtils;
 import org.dnyanyog.entity.Directory;
 
 import org.dnyanyog.enumm.ResponseCode;
+import org.dnyanyog.exception.PasswordMismatchException;
 import org.dnyanyog.repo.DirectoryServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import jakarta.validation.Valid;
 
 @Service
-public class DirectoryServiceImpl implements DirectoryService{
+public class DirectoryServiceImpl {
 
-  @Autowired DirectoryServiceRepository userRepo;
-  @Autowired DirectoryServiceResponse response;
+  @Autowired private DirectoryServiceRepository userRepo;
+  @Autowired private DirectoryServiceResponse userResponse;
 
-  @Autowired EncryptionUtils encrypt;
+  public DirectoryServiceResponse addUser(@Valid DirectoryServiceRequest request) throws Exception {
+    try {
 
-  public DirectoryServiceResponse addUser(DirectoryServiceRequest request) throws Exception {
+  
+      Directory newUser = new Directory();
+      String userKey = generateAESKey();
+      newUser.setConfirm(encryptAES(request.getConfirm(), userKey));
+      newUser.setEmail(request.getEmail());
+      newUser.setMobno(request.getMobno());
+      newUser.setPassword(encryptAES(request.getPassword(), userKey));
+      newUser.setRole(request.getRole());
+      newUser.setUsername(request.getUsername());
+      newUser.setEncryptionKey(userKey);
+    
 
-    Directory UsersTable =
-        Directory.getInstance()
-            .setConfirm(request.getConfirm())
-            .setMobno(request.getMobno())
-            .setEmail(request.getEmail())
-            .setPassword(encrypt.encrypt(request.getPassword()))
-            .setUsername(request.getUsername())
-            .setRole(request.getRole());
+      newUser = userRepo.save(newUser);
 
-    UsersTable = userRepo.save(UsersTable);
+      userResponse.setStatus(ResponseCode.Add_User_Success.getStatus());
+      userResponse.setMessage(ResponseCode.Add_User_Success.getMessage());
+  
+    } catch (Exception e) {
+      userResponse.setStatus(ResponseCode.Add_User_Fail.getStatus());
+      userResponse.setMessage(ResponseCode.Add_User_Fail.getMessage());
+    }
 
-    response
-        .getInstance()
-        .setMessage(ResponseCode.Add_User_Success.getMessage())
-        .setStatus(ResponseCode.Add_User_Success.getStatus())
-        .setMobno(UsersTable.getMobno())
-        .setRole(UsersTable.getRole())
-        .setPassword(UsersTable.getPassword())
-        .setConfirm(UsersTable.getConfirm())
-        .setEmail(UsersTable.getEmail())
-        .setUserid(UsersTable.getUserid());
-
-    return response;
+    return userResponse;
   }
 
-  public DirectoryServiceResponse updateUser(Long userid, DirectoryServiceRequest request)
-      throws Exception {
-    Optional<Directory> receiveData = userRepo.findById(userid);
-    if (receiveData.isEmpty()) {
-      response
-          .getInstance()
-          .setMessage(ResponseCode.Update_User_Fail.getMessage())
-          .setStatus(ResponseCode.Update_User_Fail.getStatus())
-          .setUserid(userid);
+  public DirectoryServiceResponse updateUser(long user_id, DirectoryServiceRequest request) {
+
+    Optional<Directory> optionalUser = userRepo.findById(user_id);
+
+    if (optionalUser.isEmpty()) {
+      userResponse.setMessage(ResponseCode.Update_User_Fail.getMessage());
+      userResponse.setStatus(ResponseCode.Update_User_Fail.getStatus());
     } else {
-      Directory user = receiveData.get();
-      response
-          .getInstance()
-          .setMessage(ResponseCode.Update_User_Success.getMessage())
-          .setStatus(ResponseCode.Update_User_Success.getStatus())
-          .setMobno(request.getMobno())
-          .setRole(request.getRole())
-          .setPassword(request.getPassword())
-          .setConfirm(request.getConfirm())
-          .setEmail(request.getEmail())
-          .setUserid(request.getUserid());
-    }
+      Directory user = optionalUser.get();
+      String userKey = user.getEncryptionKey();
 
-    return response;
+      if (request.getConfirm() != null && userKey != null) {
+        user.setConfirm(encryptAES(request.getConfirm(), userKey));
+      }
+      if (request.getPassword() != null && userKey != null) {
+        user.setPassword(encryptAES(request.getPassword(), userKey));
+      }
+      user.setEmail(request.getEmail());
+      user.setMobno(request.getMobno());
+      user.setRole(request.getRole());
+      user.setUsername(request.getUsername());
+
+      userRepo.save(user);
+
+     
+      userResponse.setMessage(ResponseCode.Update_User_Fail.getMessage());
+      userResponse.setStatus(ResponseCode.Update_User_Fail.getStatus());
+    }
+    return userResponse;
   }
 
-  public DirectoryServiceResponse getSingleUser(Long userid) throws Exception {
-    Optional<Directory> receiveData = userRepo.findById(userid);
-    if (receiveData.isEmpty()) {
-      response
-          .getInstance()
-          .setMessage(ResponseCode.Check_User_Fail.getMessage())
-          .setStatus(ResponseCode.Check_User_Fail.getStatus())
-          .setUserid(userid);
+  public DirectoryServiceResponse getSingleUser(long user_id) {
+    Optional<Directory> optionalUser = userRepo.findById(user_id);
+
+    DirectoryServiceResponse  userResponse = DirectoryServiceResponse .getInstance();
+    if (optionalUser.isEmpty()) {
+      userResponse.setMessage(ResponseCode.Check_User_Fail.getMessage());
+      userResponse.setStatus(ResponseCode.Check_User_Fail.getStatus());
     } else {
-      Directory user = receiveData.get();
-      response
-          .getInstance()
-          .setMessage(ResponseCode.Check_User_Success.getMessage())
-          .setStatus(ResponseCode.Check_User_Success.getStatus())
-          .setUsername(user.getUsername())
-          .setEmail(user.getEmail())
-          .setMobno(user.getMobno())
-          .setRole(user.getRole())
-          .setPassword(user.getPassword())
-          .setConfirm(user.getConfirm());
+      Directory user = optionalUser.get();
+      populateUserResponse(userResponse, user);
+      userResponse.setMessage(ResponseCode.Check_User_Success.getMessage());
+      userResponse.setStatus(ResponseCode.Check_User_Success.getStatus());
     }
-    return response;
+    return userResponse;
   }
 
-  public DirectoryServiceResponse Deleteuser(Long userid) throws Exception {
-    Optional<Directory> receiveData = userRepo.findById(userid);
-    if (receiveData.isPresent()) {
-      userRepo.deleteById(userid);
-      response
-          .getInstance()
-          .setMessage(ResponseCode.Delete_User_Success.getMessage())
-          .setStatus(ResponseCode.Delete_User_Success.getStatus())
-          .setUserid(userid);
-    }
-    response
-        .getInstance()
-        .setMessage(ResponseCode.Delete_User_Fail.getMessage())
-        .setStatus(ResponseCode.Delete_User_Fail.getStatus())
-        .setUserid(userid);
+  public DirectoryServiceResponse  deleteUser(long user_id) {
+    Optional<Directory> optionalUser = userRepo.findById(user_id);
+    if (optionalUser.isEmpty()) {
+      userResponse.setMessage(ResponseCode.Delete_User_Fail.getMessage());
+      userResponse.setStatus(ResponseCode.Delete_User_Fail.getStatus());
+    } else {
+      Directory user = optionalUser.get();
+     // user.setStatus(Directory.Status.DELETED);
+      userRepo.save(user);
 
-    return response;
+      userResponse.setMessage(ResponseCode.Delete_User_Success.getMessage());
+      userResponse.setStatus(ResponseCode.Delete_User_Success.getStatus());
+      populateUserResponse(userResponse, user);
+    }
+    return userResponse;
+  }
+
+  private void populateUserResponse(DirectoryServiceResponse  response, Directory users) {
+
+    response.setEmail(users.getEmail());
+    response.setMobno(users.getMobno());
+    response.setRole(users.getRole());
+    response.setUsername(users.getUsername());
+  }
+
+  private String encryptAES(String input, String key) {
+    if (input == null || key == null) {
+      throw new IllegalArgumentException("Input and key cannot be null");
+    }
+    try {
+      Cipher cipher = Cipher.getInstance("AES");
+      SecretKeySpec secretKeySpec = new SecretKeySpec(Base64.getDecoder().decode(key), "AES");
+      cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
+      byte[] encryptedBytes = cipher.doFinal(input.getBytes(StandardCharsets.UTF_8));
+      return Base64.getEncoder().encodeToString(encryptedBytes);
+    } catch (Exception e) {
+      throw new RuntimeException("Error encrypting with AES", e);
+    }
+  }
+
+  private String generateAESKey() {
+    try {
+      KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+      keyGen.init(256);
+      SecretKey secretKey = keyGen.generateKey();
+      byte[] encodedKey = secretKey.getEncoded();
+      return Base64.getEncoder().encodeToString(encodedKey);
+    } catch (Exception e) {
+      throw new RuntimeException("Error generating AES key", e);
+    }
   }
 }

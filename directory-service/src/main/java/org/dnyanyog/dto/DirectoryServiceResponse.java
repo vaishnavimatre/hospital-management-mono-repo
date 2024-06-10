@@ -1,23 +1,45 @@
 package org.dnyanyog.dto;
 
+import java.time.LocalDateTime;
+
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Component
 public class DirectoryServiceResponse {
 
   private String status;
   private String message;
-  
 
-  private long mobno;
+  private String mobno;
   private String role;
   private String password;
   private String confirm;
-
+  private LocalDateTime timestamp;
   private String username;
+
+  public String getMobno() {
+    return mobno;
+  }
+
+  public DirectoryServiceResponse setMobno(String mobno) {
+    this.mobno = mobno;
+    return this;
+  }
 
   public String getUsername() {
     return username;
+  }
+
+  public LocalDateTime getTimestamp() {
+    return timestamp;
+  }
+
+  public DirectoryServiceResponse setTimestamp(LocalDateTime timestamp) {
+    this.timestamp = timestamp;
+    return this;
   }
 
   public DirectoryServiceResponse setUsername(String username) {
@@ -25,27 +47,26 @@ public class DirectoryServiceResponse {
     return this;
   }
 
-  
-
   private long userid;
 
-  
-
   public long getUserid() {
-  return userid;}
+    return userid;
+  }
 
-  public void setUserid(long userid) {
-  this.userid = userid;}
+  public DirectoryServiceResponse setUserid(long userid) {
+    this.userid = userid;
+    return this;
+  }
 
+  private String email;
 
-private String email;
-
-  public DirectoryServiceResponse getInstance() {
+  public static DirectoryServiceResponse getInstance() {
     return new DirectoryServiceResponse();
   }
 
   public String getStatus() {
     return status;
+    
   }
 
   public DirectoryServiceResponse setStatus(String status) {
@@ -57,11 +78,9 @@ private String email;
     return message;
   }
 
-  public DirectoryServiceResponse setMessage(String message) {
+  public void setMessage(String message) {
     this.message = message;
-    return this;
   }
-
 
   public String getEmail() {
     return email;
@@ -72,15 +91,7 @@ private String email;
     return this;
   }
 
- 
-  public long getMobno() {
-return mobno;}
-
-public DirectoryServiceResponse setMobno(long mobno) {
-this.mobno = mobno;
-return this;}
-
-public String getRole() {
+  public String getRole() {
     return role;
   }
 

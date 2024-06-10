@@ -2,15 +2,51 @@ package org.dnyanyog.dto;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Component
 public class DirectoryServiceData {
   private long userid;
+  
+
+@NotNull(message = "Username is mandatory")
+  @NotBlank(message = "username  should not be blank")
+  @Size(max = 50, message = "username  length should be at most 20 characters")
   private String username;
   private String email;
-  private long mobno;
+  
+
+  @NotNull(message = "Mobile_Number is mandatory")
+  private String mobno;
+  
+  @NotNull(message = "Role is mandatory")
+  @NotBlank(message = "Role should not be blank")
   private String role;
+  
+
+  @NotNull(message = "password is mandatory")
+  @NotBlank(message = "password should not be blank")
+  @Size(max = 50, message = "password length should be at most 50 characters")
   private String password;
+
+  @NotNull(message = "confirm is mandatory")
+  @NotBlank(message = "confirm should not be blank")
+  @Size(max = 50, message = "confirm length should be at most 50 characters")
   private String confirm;
+  
+
+  public String getMobno() {
+return mobno;}
+
+public void setMobno(String mobno) {
+this.mobno = mobno;}
 
   public long getUserid() {
     return userid;
@@ -24,9 +60,9 @@ public class DirectoryServiceData {
     return username;
   }
 
-  public DirectoryServiceData setUsername(String username) {
+  public void setUsername(String username) {
     this.username = username;
-    return this;
+ 
   }
 
   public String getEmail() {
@@ -37,14 +73,6 @@ public class DirectoryServiceData {
     this.email = email;
   }
 
-  public long getMobno() {
-    return mobno;
-  }
-
-  public DirectoryServiceData setMobno(long mobno) {
-    this.mobno = mobno;
-    return this;
-  }
 
   public String getRole() {
     return role;

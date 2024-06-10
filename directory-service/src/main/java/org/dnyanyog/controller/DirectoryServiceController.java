@@ -9,6 +9,7 @@ import org.dnyanyog.service.DirectoryServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,29 +27,24 @@ public class DirectoryServiceController {
     return userservice.addUser(request);
   }
 
-  @GetMapping(
-      path = "/api/v1/directory/{userid}",
-      consumes = {"application/json", "application/xml"},
-      produces = {"application/json", "application/xml"})
-  public DirectoryServiceResponse getSingleUser(Long userid) throws Exception {
+  
 
-    return userservice.getSingleUser(userid);
-  }
-
-  @PostMapping(
-      path = "/api/v1/directory/update",
-      consumes = {"application/json", "application/xml"},
-      produces = {"application/json", "application/xml"})
-  public DirectoryServiceResponse updateUser(Long userid, DirectoryServiceRequest request) throws Exception {
+  @PostMapping(path = "/api/v1/directory/{userid}")
+  public DirectoryServiceResponse updateUser(  @PathVariable long userid,@RequestBody DirectoryServiceRequest request)  {
     return userservice.updateUser(userid, request);
   }
 
+ 
+  @GetMapping(
+	      path = "/api/v1/directory/{userid}")
+	  public DirectoryServiceResponse getSingleUser( @PathVariable  long userid) throws Exception  {
+
+	    return userservice.getSingleUser(userid);
+	  }
   @DeleteMapping(
-      path = "/api/v1/directory/{userid}",
-      consumes = {"application/json", "application/xml"},
-      produces = {"application/json", "application/xml"})
-  public DirectoryServiceResponse Deleteuser(Long userid) throws Exception{
-    return userservice.Deleteuser(userid);
+      path = "/api/v1/directory/{userid}")
+  public DirectoryServiceResponse Deleteuser( @PathVariable  long userid){
+    return userservice.deleteUser(userid);
   }
 
 }

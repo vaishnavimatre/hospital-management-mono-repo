@@ -16,24 +16,39 @@ import jakarta.persistence.Table;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Directory {
 
-  @Id @GeneratedValue @Column private long userid;
+  @Id
+  @GeneratedValue
+  @Column(name = "userId", nullable = false, insertable = true, updatable = false)
+  private long userid;
 
-  @Column private String username;
+  @Column(nullable = false, insertable = true, updatable = false, length = 50)
+  private String username;
 
   @Column private String email;
-  @Column private long mobno;
+  @Column private String mobno;
 
   @Column private String role;
   @Column private String password;
   @Column private String confirm;
+  
+  @Column private String encryptionKey;
 
-  public long getMobno() {
+  public String getEncryptionKey() {
+    return encryptionKey;
+  }
+
+  public Directory setEncryptionKey(String encryptionKey) {
+    this.encryptionKey = encryptionKey;
+    return this;
+  }
+
+  public String getMobno() {
     return mobno;
   }
 
-  public Directory setMobno(long mobno) {
+  public Directory setMobno(String mobno) {
     this.mobno = mobno;
-    		return this;
+    return this; 
   }
 
   public static Directory getInstance() {
@@ -46,7 +61,7 @@ public class Directory {
 
   public Directory setUserid(long userid) {
     this.userid = userid;
-	return this;
+    return this; 
   }
 
   public String getUsername() {
@@ -55,7 +70,7 @@ public class Directory {
 
   public Directory setUsername(String username) {
     this.username = username;
-	return this;
+    return this; 
   }
 
   public String getEmail() {
@@ -64,7 +79,7 @@ public class Directory {
 
   public Directory setEmail(String email) {
     this.email = email;
-	return this;
+    return this; 
   }
 
   public String getRole() {
@@ -73,7 +88,7 @@ public class Directory {
 
   public Directory setRole(String role) {
     this.role = role;
-	return this;
+    return this; 
   }
 
   public String getPassword() {
@@ -82,7 +97,7 @@ public class Directory {
 
   public Directory setPassword(String password) {
     this.password = password;
-	return this;
+    return this; 
   }
 
   public String getConfirm() {
@@ -91,6 +106,6 @@ public class Directory {
 
   public Directory setConfirm(String confirm) {
     this.confirm = confirm;
-	return this;
+    return this; 
   }
 }
