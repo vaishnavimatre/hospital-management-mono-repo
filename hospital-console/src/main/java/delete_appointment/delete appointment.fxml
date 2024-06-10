@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delete_appointment.DeleteAppointmentScreenController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="1134.0">
+         <children>
+            <Pane layoutX="-3.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1151.0">
+               <children>
+                  <Pane layoutY="-12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1155.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff851f" height="75.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="1151.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7f8" height="599.0" layoutX="277.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="860.0" />
+                        <TextField fx:id="appointment_id" layoutX="421.0" layoutY="112.0" prefHeight="31.0" prefWidth="147.0" />
+                        <TextField fx:id="patientid" layoutX="734.0" layoutY="112.0" />
+                        <Button layoutX="989.0" layoutY="112.0" mnemonicParsing="false" onAction="#Search" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: green;" text="Search" textFill="#ffecec" />
+                        <Text layoutX="287.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID" wrappingWidth="115.95703125" />
+                        <Text layoutX="622.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID" wrappingWidth="73.6708984375" />
+                        <TextField fx:id="patientIds" layoutX="519.0" layoutY="300.0" prefHeight="45.0" prefWidth="536.0" />
+                        <TextField fx:id="appointment_time" layoutX="519.0" layoutY="369.0" prefHeight="45.0" prefWidth="536.0" />
+                        <TextField fx:id="examination_date" layoutX="519.0" layoutY="433.0" prefHeight="45.0" prefWidth="536.0" />
+                        <TextField fx:id="patient_name" layoutX="519.0" layoutY="230.0" prefHeight="45.0" prefWidth="536.0" />
+                        <Button layoutX="559.0" layoutY="537.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="45.0" prefWidth="147.0" style="-fx-border-color: red;" text="Cancel" textFill="#d71111" />
+                        <Button layoutX="847.0" layoutY="531.0" mnemonicParsing="false" onAction="#Delete" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: green;" text="Delete" textFill="#e4dddd" />
+                        <Text fill="WHITE" layoutX="291.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Appointment">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" wrappingWidth="59.6708984375" />
+                        <Button layoutX="20.0" layoutY="97.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="DashBoard" />
+                        <Button layoutX="20.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="Patients" />
+                        <Button layoutX="20.0" layoutY="206.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" style="-fx-background-color: #ff851f;" text="Cases" textFill="#ebe9e9">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="20.0" layoutY="260.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="Appointments" />
+                        <Button layoutX="20.0" layoutY="323.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="Users" />
+                        <Circle fill="#813dad" layoutX="885.0" layoutY="38.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fill="#fcecec" layoutX="921.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaishnavi(Admin)" wrappingWidth="207.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#f1eeee" layoutX="871.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  V" wrappingWidth="27.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="345.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name(English)" />
+                        <Text layoutX="345.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Examination Date" />
+                        <Text layoutX="340.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Time" />
+                        <Text layoutX="386.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Id" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

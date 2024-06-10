@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="search_user.SearchUserScreenController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="967.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="988.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa51f" height="70.0" layoutX="-27.0" layoutY="-21.0" stroke="BLACK" strokeType="INSIDE" width="1027.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="554.0" layoutX="216.0" layoutY="102.0" stroke="WHITE" strokeType="INSIDE" width="743.0" />
+                  <Circle fill="#21197c" layoutX="784.0" layoutY="14.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="WHITE" layoutX="776.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="832.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaishnavi(Admin)">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="userid" layoutX="394.0" layoutY="102.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="username" layoutX="399.0" layoutY="182.0" prefHeight="50.0" prefWidth="466.0" />
+                  <TextField fx:id="email" layoutX="399.0" layoutY="252.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="mobno" layoutX="399.0" layoutY="317.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="role" layoutX="399.0" layoutY="380.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="password" layoutX="399.0" layoutY="447.0" prefHeight="43.0" prefWidth="466.0" />
+                  <Text layoutX="244.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id To Search" wrappingWidth="150.0" />
+                  <Text layoutX="254.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name(English)" wrappingWidth="129.5361328125" />
+                  <Text layoutX="286.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
+                  <Text layoutX="276.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="password" />
+                  <Button fx:id="Delete" layoutX="519.0" layoutY="568.0" mnemonicParsing="false" onAction="#Delete" prefHeight="39.0" prefWidth="121.0" style="-fx-background-color: white; -fx-border-color: red;" text="Delete" textFill="#da2121" />
+                  <Button fx:id="Search" layoutX="881.0" layoutY="107.0" mnemonicParsing="false" onAction="#Search" prefHeight="39.0" prefWidth="96.0" style="-fx-background-color: #33b120;" text="Search" textFill="#e4eee3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="225.0" layoutY="2.0" text="Search User" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="288.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Email" />
+                  <Button fx:id="Back" layoutX="319.0" layoutY="571.0" mnemonicParsing="false" onAction="#Back" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: white; -fx-border-color: red;" text="Back" textFill="#d31717" />
+                  <Button fx:id="Edit" layoutX="741.0" layoutY="568.0" mnemonicParsing="false" onAction="#Edit" prefHeight="39.0" prefWidth="124.0" style="-fx-background-color: #72B72E;" text="Edit" textFill="WHITE" />
+                  <Text layoutX="266.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No" />
+                  <Text fill="WHITE" layoutX="8.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="63.09814453125">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+   <children>
+            <Button layoutX="10.0" layoutY="233.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="174.0" text="Appointments" />
+         <Button layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="174.0" text="Cases" />
+         <Button layoutX="10.0" layoutY="143.0" mnemonicParsing="false" onAction="#Patients" prefHeight="35.0" prefWidth="174.0" text="Patients" />
+         <Button layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="174.0" text="Dashboard" />
+         <Button layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="174.0" text="Users" />
+      <TextField fx:id="confirm" layoutX="423.0" layoutY="531.0" prefHeight="44.0" prefWidth="462.0" />
+      <Text layoutX="278.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm" wrappingWidth="89.6708984375" />
+   </children>
+</Pane>

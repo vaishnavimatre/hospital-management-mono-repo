@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edit_patient.EditPatientScreenController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="1116.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9d1f" height="78.0" layoutX="-10.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" width="1160.0" />
+            <Region layoutX="310.0" layoutY="44.0" prefHeight="700.0" prefWidth="796.0" />
+            <Button layoutX="868.0" layoutY="617.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: #21ae21;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Circle fill="#711186" layoutX="906.0" layoutY="34.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="898.0" layoutY="18.0" text="V" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="940.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaibhav (Admin)">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="182.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Patient" wrappingWidth="212.6357421875">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edeeee" height="608.0" layoutX="264.0" layoutY="75.0" stroke="#e4dddd" strokeType="INSIDE" width="838.0" />
+            <TextField fx:id="first_examination_date" layoutX="552.0" layoutY="537.0" prefHeight="57.0" prefWidth="495.0" />
+            <TextField fx:id="address" layoutX="552.0" layoutY="476.0" prefHeight="44.0" prefWidth="495.0" />
+            <TextField fx:id="gender" layoutX="552.0" layoutY="411.0" prefHeight="44.0" prefWidth="495.0" />
+            <TextField fx:id="patient_name_english" layoutX="552.0" layoutY="169.0" prefHeight="44.0" prefWidth="495.0" />
+            <TextField fx:id="patient_name_marathi" layoutX="552.0" layoutY="230.0" prefHeight="44.0" prefWidth="495.0" />
+            <TextField fx:id="birth_date" layoutX="552.0" layoutY="294.0" prefHeight="44.0" prefWidth="495.0" />
+            <TextField fx:id="mobile_number" layoutX="552.0" layoutY="355.0" prefHeight="44.0" prefWidth="495.0" />
+            <Text layoutX="318.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient Name(English)" wrappingWidth="193.6708984375" />
+            <Text layoutX="356.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Gender" wrappingWidth="117.6708984375" />
+            <Text layoutX="346.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Birth Date" wrappingWidth="136.6357421875" />
+            <Text layoutX="351.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Mobile  Number" wrappingWidth="144.0" />
+            <Text layoutX="298.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient Name(Marathi)" wrappingWidth="193.6708984375" />
+            <Text layoutX="330.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" New First Examination Date" />
+            <Text layoutX="366.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Address" />
+            <TextField fx:id="patient_id" layoutX="552.0" layoutY="89.0" prefHeight="44.0" prefWidth="495.0" />
+            <Text layoutX="330.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New PatientId" wrappingWidth="185.80810546875" />
+            <Button fx:id="Edit" layoutX="1059.0" layoutY="97.0" mnemonicParsing="false" onAction="#Edit" prefHeight="31.0" prefWidth="73.0" style="-fx-background-color: #21ae21;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="570.0" layoutY="617.0" mnemonicParsing="false" onAction="#Back" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: white; -fx-border-color: red;" text="Back" textFill="#da1111">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="898.0" layoutY="607.0" mnemonicParsing="false" onAction="#Save" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #21ae21;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+        <Button layoutX="10.0" layoutY="233.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="174.0" text="Appointments" />
+      <Button layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="174.0" text="Cases" />
+      <Button layoutX="10.0" layoutY="143.0" mnemonicParsing="false" onAction="#Patients" prefHeight="35.0" prefWidth="174.0" text="Patients" />
+      <Button layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="174.0" text="Dashboard" />
+      <Button layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="174.0" text="Users" />
+   </children>
+</Pane>

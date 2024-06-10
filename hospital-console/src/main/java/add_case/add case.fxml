@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="add_case.AddCaseScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa51f" height="70.0" stroke="BLACK" strokeType="INSIDE" width="1067.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" layoutX="262.0" layoutY="735.0" stroke="WHITE" strokeType="INSIDE" width="791.0" />
+      <Circle fill="#21197c" layoutX="842.0" layoutY="35.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fill="WHITE" layoutX="834.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="880.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaibav Zodge">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="patientNameInEnglish" layoutX="467.0" layoutY="102.0" prefHeight="43.0" prefWidth="466.0" />
+      <TextField fx:id="patient_id" layoutX="467.0" layoutY="165.0" prefHeight="43.0" prefWidth="466.0" />
+      <TextField fx:id="caseNumber" layoutX="467.0" layoutY="236.0" prefHeight="43.0" prefWidth="466.0" />
+      <TextField fx:id="examinationDate" layoutX="467.0" layoutY="287.0" prefHeight="43.0" prefWidth="466.0" />
+      <TextArea fx:id="prescription" layoutX="467.0" layoutY="441.0" prefHeight="78.0" prefWidth="466.0" />
+      <Text layoutX="259.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name In English" wrappingWidth="170.3759765625" />
+      <Text layoutX="310.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="patient  Id" />
+      <Text layoutX="304.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case Number" />
+      <Text layoutX="320.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prescription" wrappingWidth="115.95703125" />
+      <Text layoutX="291.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Examination Date" />
+      <Text layoutX="317.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Systoms" />
+      <Button layoutX="490.0" layoutY="556.0" mnemonicParsing="false" onAction="#Back" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: white; -fx-border-color: red;" text="Back" textFill="#da2121" />
+      <Button layoutX="746.0" layoutY="553.0" mnemonicParsing="false" onAction="#Save" prefHeight="39.0" prefWidth="143.0" style="-fx-background-color: #33b120;" text="Save" textFill="#e4eee3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Text fill="#ebe4e4" layoutX="206.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Case">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="symptoms" layoutX="467.0" layoutY="346.0" prefHeight="70.0" prefWidth="466.0" />
+      <Button layoutX="14.0" layoutY="231.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="143.0" text="Appointments" />
+                  <Button layoutX="14.0" layoutY="182.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="143.0" text="Cases" />
+                  <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#Patients" prefHeight="31.0" prefWidth="143.0" text="Patients" />
+                  <Button layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="143.0" text="DashBoard" />
+                  <Button layoutX="14.0" layoutY="272.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="143.0" text="Users" />
+   </children>
+</Pane>

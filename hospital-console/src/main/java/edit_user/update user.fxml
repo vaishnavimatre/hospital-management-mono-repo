@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edit_user.EditUserScreenController">
+   <children>
+      <Pane layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1040.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecf1f5" height="604.0" layoutX="232.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="803.0" />
+            <Pane layoutX="25.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="991.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa51f" height="70.0" layoutX="-35.0" layoutY="-39.0" stroke="BLACK" strokeType="INSIDE" width="1061.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="587.0" layoutX="237.0" layoutY="80.0" stroke="WHITE" strokeType="INSIDE" width="769.0" />
+                  <Circle fill="#21197c" layoutX="700.0" layoutY="-3.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="WHITE" layoutX="692.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="741.0" layoutY="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaishnavi (Admin)" wrappingWidth="169.958984375">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="email" layoutX="475.0" layoutY="228.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="mobno" layoutX="475.0" layoutY="292.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="role" layoutX="475.0" layoutY="352.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="password" layoutX="475.0" layoutY="414.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="confirm" layoutX="475.0" layoutY="467.0" prefHeight="43.0" prefWidth="466.0" />
+                  <Text layoutX="279.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name(English)" wrappingWidth="153.0" />
+                  <Text layoutX="329.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Email" />
+                  <Text layoutX="304.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No" />
+                  <Text layoutX="329.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" wrappingWidth="39.51416015625" />
+                  <Text layoutX="308.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                  <Button fx:id="Back" layoutX="515.0" layoutY="561.0" mnemonicParsing="false" onAction="#Back" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: red;" text="Back" textFill="#da2121" />
+                  <Button layoutX="768.0" layoutY="561.0" mnemonicParsing="false" onAction="#Save" prefHeight="39.0" prefWidth="143.0" style="-fx-background-color: #33b120;" text="Save" textFill="#e4eee3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="168.0" layoutY="-21.0" text="Update User" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="43.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="63.09814453125">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="userid" layoutX="442.0" layoutY="89.0" prefHeight="43.0" prefWidth="466.0" />
+                  <Text layoutX="322.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm" />
+                  <TextField fx:id="username" layoutX="475.0" layoutY="163.0" prefHeight="43.0" prefWidth="466.0" />
+                  <Text layoutX="264.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserId To Search" wrappingWidth="150.0" />
+                  <Button fx:id="Edit" layoutX="924.0" layoutY="91.0" mnemonicParsing="false" onAction="#Edit" prefHeight="39.0" prefWidth="78.0" style="-fx-background-color: #72B72E;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      
+            <Button layoutX="14.0" layoutY="229.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="143.0" text="Appointments" />
+                     <Button layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="143.0" text="Cases" />
+                     <Button layoutX="14.0" layoutY="135.0" mnemonicParsing="false" onAction="#Patients" prefHeight="31.0" prefWidth="143.0" text="Patients" />
+                     <Button layoutX="14.0" layoutY="94.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="143.0" text="DashBoard" />
+                     <Button layoutX="14.0" layoutY="280.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="143.0" text="Users" />
+   </children>
+</Pane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="1116.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="add_patient.AddPatientScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9d1f" height="68.0" stroke="BLACK" strokeType="INSIDE" width="1116.0" />
+      <Region layoutX="310.0" layoutY="44.0" prefHeight="700.0" prefWidth="796.0" />
+      <TextField fx:id="gender" layoutX="442.0" layoutY="300.0" prefHeight="44.0" prefWidth="495.0" />
+      <TextField fx:id="birth_date" layoutX="442.0" layoutY="364.0" prefHeight="44.0" prefWidth="495.0" />
+      <TextField fx:id="address" layoutX="442.0" layoutY="491.0" prefHeight="57.0" prefWidth="495.0" />
+      <TextField fx:id="mobile_number" layoutX="445.0" layoutY="237.0" prefHeight="44.0" prefWidth="495.0" />
+      <TextField fx:id="patient_name_marathi" layoutX="442.0" layoutY="169.0" prefHeight="44.0" prefWidth="495.0" />
+      <TextField fx:id="first_examination_date" layoutX="442.0" layoutY="431.0" prefHeight="44.0" prefWidth="495.0" />
+      <TextField fx:id="patient_name_english" layoutX="442.0" layoutY="106.0" prefHeight="44.0" prefWidth="495.0" />
+      <Button layoutX="506.0" layoutY="584.0" mnemonicParsing="false" onAction="#Back" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: white; -fx-border-color: red;" text="Back" textFill="#da1111">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="745.0" layoutY="584.0" mnemonicParsing="false" onAction="#Save" prefHeight="44.0" prefWidth="144.0" style="-fx-background-color: #21ae21;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Text layoutX="269.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+      <Text layoutX="255.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Examination Date" />
+      <Text layoutX="265.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" wrappingWidth="136.6357421875" />
+      <Text layoutX="277.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" wrappingWidth="117.6708984375" />
+      <Text layoutX="264.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile  Number" wrappingWidth="144.0" />
+      <Text layoutX="249.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name(Marathi)" wrappingWidth="173.6708984375" />
+      <Text layoutX="255.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name(English)" wrappingWidth="156.6708984375" />
+      <Circle fill="#711186" layoutX="906.0" layoutY="34.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="898.0" layoutY="18.0" text="V" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="940.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaibhav (Admin)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="159.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Patient" wrappingWidth="136.6357421875">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="41.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patients" wrappingWidth="89.529296875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="10.0" layoutY="233.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="174.0" text="Appointments" />
+      <Button layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="174.0" text="Cases" />
+      <Button layoutX="10.0" layoutY="143.0" mnemonicParsing="false" onAction="#Patients" prefHeight="35.0" prefWidth="174.0" text="Patients" />
+      <Button layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="174.0" text="Dashboard" />
+      <Button layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="174.0" text="Users" />
+   </children>
+</Pane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="1088.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edit_case.EditCaseScreenController">
+   <children>
+      <Pane layoutX="-65.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="904.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="918.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa51f" height="70.0" layoutX="53.0" layoutY="-21.0" stroke="BLACK" strokeType="INSIDE" width="1088.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="587.0" layoutX="172.0" layoutY="69.0" stroke="WHITE" strokeType="INSIDE" width="816.0" />
+                  <Circle fill="#21197c" layoutX="746.0" layoutY="19.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="WHITE" layoutX="738.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="804.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaibav(Admin)">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="case_id" layoutX="505.0" layoutY="113.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="patient_name" layoutX="505.0" layoutY="249.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="caseNumber" layoutX="505.0" layoutY="317.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="prescription" layoutX="505.0" layoutY="447.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="symptoms" layoutX="505.0" layoutY="379.0" prefHeight="43.0" prefWidth="466.0" />
+                  <Text layoutX="308.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="caseId To Search" wrappingWidth="150.0" />
+                  <Text layoutX="334.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient Id" />
+                  <Text layoutX="324.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Case Number" />
+                  <Text layoutX="308.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Systoms" />
+                  <Text layoutX="304.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Prescription" />
+                  <Button layoutX="467.0" layoutY="549.0" mnemonicParsing="false" prefHeight="39.0" onAction="#Back" prefWidth="121.0" style="-fx-background-color: white; -fx-border-color: red;" text="Cancel" textFill="#da2121" />
+                  <Label layoutX="225.0" layoutY="2.0" text="Update Case" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="patient_id" layoutX="505.0" layoutY="173.0" prefHeight="50.0" prefWidth="466.0" />
+                  <Text layoutX="327.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient Name" />
+                  <Button layoutX="707.0" layoutY="549.0" mnemonicParsing="false" onAction="#Save" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: #72B72E;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Button fx:id="Edit" layoutX="943.0" layoutY="130.0" mnemonicParsing="false" onAction="#Edit" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #72B72E;" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+        <Button layoutX="14.0" layoutY="229.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="143.0" text="Appointments" />
+                     <Button layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="143.0" text="Cases" />
+                     <Button layoutX="14.0" layoutY="135.0" mnemonicParsing="false" onAction="#Patients" prefHeight="31.0" prefWidth="143.0" text="Patients" />
+                     <Button layoutX="14.0" layoutY="94.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="143.0" text="DashBoard" />
+                     <Button layoutX="14.0" layoutY="280.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="143.0" text="Users" />
+   </children>
+</Pane>

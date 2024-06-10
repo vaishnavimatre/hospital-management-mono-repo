@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="add_appointment.AddAppointmentScreenController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1063.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecf1f5" height="572.0" layoutX="232.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="832.0" />
+            <Pane layoutX="25.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="1024.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa51f" height="70.0" layoutX="-35.0" layoutY="-29.0" stroke="BLACK" strokeType="INSIDE" width="1079.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="516.0" layoutX="225.0" layoutY="82.0" stroke="WHITE" strokeType="INSIDE" width="810.0" />
+                  <Circle fill="#21197c" layoutX="809.0" layoutY="6.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="WHITE" layoutX="801.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="857.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaibav (Admin)">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="patient_name" layoutX="467.0" layoutY="102.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="patient_id" layoutX="467.0" layoutY="165.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="examination_date" layoutX="467.0" layoutY="241.0" prefHeight="43.0" prefWidth="466.0" />
+                  <TextField fx:id="appointment_time" layoutX="467.0" layoutY="319.0" prefHeight="43.0" prefWidth="466.0" />
+                  <Text layoutX="296.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name" wrappingWidth="128.0" />
+                  <Text layoutX="317.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Id" />
+                  <Text layoutX="290.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Examination Date" />
+                  <Text layoutX="286.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Time" />
+                  <Button layoutX="513.0" layoutY="480.0" mnemonicParsing="false" onAction="#Back" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: white; -fx-border-color: red;" text="Back" textFill="#da2121" />
+                  <Button layoutX="772.0" layoutY="480.0" mnemonicParsing="false" onAction="#Save" prefHeight="39.0" prefWidth="143.0" style="-fx-background-color: #33b120;" text="Save" textFill="#e4eee3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="219.0" layoutY="-11.0" text="Add Appointment" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="-18.0" layoutY="231.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="143.0" text="Appointments" />
+                  <Button layoutX="-18.0" layoutY="182.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="143.0" text="Cases" />
+                  <Button layoutX="-18.0" layoutY="134.0" mnemonicParsing="false" onAction="#Patients" prefHeight="31.0" prefWidth="143.0" text="Patients" />
+                  <Button layoutX="-18.0" layoutY="87.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="143.0" text="DashBoard" />
+                  <Button layoutX="-18.0" layoutY="283.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="143.0" text="Users" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

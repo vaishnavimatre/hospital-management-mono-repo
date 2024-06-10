@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" fx:controller="dashboard.DashboardScreenController"  maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1147.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fc8814" height="87.0" stroke="BLACK" strokeType="INSIDE" width="1147.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7eaee" height="654.0" layoutX="277.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="860.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ec" height="200.0" layoutX="869.0" layoutY="168.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ec" height="200.0" layoutX="607.0" layoutY="168.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ec" height="200.0" layoutX="881.0" layoutY="489.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ec" height="200.0" layoutX="607.0" layoutY="489.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ec" height="200.0" layoutX="326.0" layoutY="489.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Button layoutX="23.0" layoutY="237.0" mnemonicParsing="false" onAction="#Appointments" prefHeight="31.0" prefWidth="187.0" text="Appointments" />
+      <Button layoutX="20.0" layoutY="180.0" mnemonicParsing="false" onAction="#Patients" prefHeight="31.0" prefWidth="187.0" text="Patients" />
+      <Button layoutX="23.0" layoutY="353.0" mnemonicParsing="false" onAction="#Users" prefHeight="31.0" prefWidth="187.0" text="Users" />
+      <Button layoutX="32.0" layoutY="716.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+      <Button layoutX="23.0" layoutY="296.0" mnemonicParsing="false" onAction="#Cases" prefHeight="31.0" prefWidth="187.0" text="Cases" />
+      <Button layoutX="23.0" layoutY="125.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="31.0" prefWidth="187.0" text="Dashboard" />
+      <Text fill="#fcebeb" layoutX="210.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="155.6708984375">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#e8dcdc" layoutX="869.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaibhav(Admin)" wrappingWidth="148.6708984375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Circle fill="#851da4" layoutX="823.0" layoutY="40.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fill="#fcf1f1" layoutX="818.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ec" height="208.0" layoutX="320.0" layoutY="169.0" stroke="#a9a1a1" strokeDashOffset="20.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="2.0" width="212.0" />
+      <Line endX="100.0" layoutX="421.0" layoutY="202.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="707.0" layoutY="201.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="969.0" layoutY="202.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="969.0" layoutY="202.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="421.0" layoutY="533.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="707.0" layoutY="536.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="707.0" layoutY="536.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="985.0" layoutY="535.0" startX="-100.0" />
+   </children>
+</Pane>

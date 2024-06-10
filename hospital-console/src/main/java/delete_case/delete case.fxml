@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="delete_case.DeleteCaseScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff851f" height="75.0" stroke="BLACK" strokeType="INSIDE" width="1161.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f7f8" height="691.0" layoutX="277.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="871.0" />
+      <TextField fx:id="case_id" layoutX="421.0" layoutY="112.0" prefHeight="31.0" prefWidth="147.0" />
+      <TextField fx:id="patient_id" layoutX="734.0" layoutY="112.0" />
+      <Button layoutX="989.0" layoutY="112.0" mnemonicParsing="false" onAction="#Search" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: green;" text="Search" textFill="#ffecec" />
+      <Text layoutX="291.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases ID" wrappingWidth="81.6708984375" />
+      <Text layoutX="622.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID" wrappingWidth="73.6708984375" />
+      <TextField fx:id="patient_ids" layoutX="519.0" layoutY="300.0" prefHeight="45.0" prefWidth="536.0" />
+      <TextField fx:id="caseNumber" layoutX="519.0" layoutY="369.0" prefHeight="45.0" prefWidth="536.0" />
+      <TextField fx:id="examination_date" layoutX="519.0" layoutY="433.0" prefHeight="45.0" prefWidth="536.0" />
+      <TextField fx:id="patient_name" layoutX="519.0" layoutY="230.0" prefHeight="45.0" prefWidth="536.0" />
+      <TextArea fx:id="symptoms" layoutX="519.0" layoutY="505.0" prefHeight="58.0" prefWidth="536.0" />
+      <TextArea fx:id="prescription" layoutX="519.0" layoutY="578.0" prefHeight="58.0" prefWidth="536.0" />
+      <Button layoutX="594.0" layoutY="667.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="45.0" prefWidth="147.0" style="-fx-border-color: red;" text="Cancel" textFill="#d71111" />
+      <Button layoutX="869.0" layoutY="667.0" mnemonicParsing="false" onAction="#Delete" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: green;" text="Delete" textFill="#e4dddd" />
+      <Text fill="WHITE" layoutX="291.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Cases">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
+      <Text layoutX="44.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" wrappingWidth="59.6708984375" />
+      <Button layoutX="20.0" layoutY="97.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="DashBoard" />
+      <Button layoutX="20.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="Patients" />
+      <Button layoutX="20.0" layoutY="206.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" style="-fx-background-color: #ff851f;" text="Cases" textFill="#ebe9e9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="20.0" layoutY="260.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="Appointments" />
+      <Button layoutX="20.0" layoutY="323.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="207.0" text="Users" />
+      <Circle fill="#813dad" layoutX="885.0" layoutY="38.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fill="#fcecec" layoutX="923.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaibah(Admin)" wrappingWidth="186.134765625">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#f1eeee" layoutX="871.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  V" wrappingWidth="27.6708984375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="345.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name(English)" />
+      <Text layoutX="367.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Symptoms" />
+      <Text layoutX="345.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Examination Date" />
+      <Text layoutX="376.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Case Number" />
+      <Text layoutX="386.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Id" />
+      <Text layoutX="378.0" layoutY="623.0" strokeType="OUTSIDE" strokeWidth="0.0" text="prescription" />
+   </children>
+</Pane>
