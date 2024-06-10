@@ -1,9 +1,8 @@
 package org.dnyanyog.dto;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
@@ -15,13 +14,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class PatientData {
 
-  @NotNull(message = "Username is mandatory")
-  @NotBlank(message = "Username should not be blank")
-  @Size(max = 50, message = "Username length should be at most 20 characters")
+  private long patientid;
+
+  public long getPatientid() {
+    return patientid;
+  }
+
+  public void setPatientid(long patientid) {
+    this.patientid = patientid;
+  }
+
+  @NotNull(message = "Patientname is mandatory")
+  @NotBlank(message = "Patientname  should not be blank")
+  @Size(max = 50, message = "Patientname  length should be at most 20 characters")
   private String patient_name_english;
 
-  @NotNull(message = "Username in Marathi is mandatory")
-  @NotBlank(message = "Username in Marathi should not be blank")
+  @NotNull(message = "Patientname  in Marathi is mandatory")
+  @NotBlank(message = "Patientname  in Marathi should not be blank")
   @Size(max = 50, message = "Username in Marathi length should be at most 20 characters")
   private String patient_name_marathi;
 

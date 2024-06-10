@@ -5,98 +5,106 @@ import org.springframework.stereotype.Component;
 @Component
 public class PatientResponse {
 
-	  private String status;
-	  private String message;
-	  private String patient_name_english;
-	  private String patient_name_marathi;
-	  private String mobile_number;
-	  private String gender;
-	  private String birth_date;
-	  private String first_examination_date;
-	  private String address;
-	  private long patient_id;
+  private String status;
+  private String message;
+  private String patient_name_english;
+  private String patient_name_marathi;
+  private String mobile_number;
+  private String gender;
+  private String birth_date;
+  private String first_examination_date;
+  private String address;
+  private long patientid;
 
-	  public String getStatus() {
-	    return status;
-	  }
+  public long getPatientid() {
+    return patientid;
+  }
 
-	  public void setStatus(String status) {
-	    this.status = status;
-	  }
+  public PatientResponse setPatientid(long patientid) {
+    this.patientid = patientid;
+    return this;
+  }
 
-	  public String getMessage() {
-	    return message;
-	  }
+ public String getStatus() {
+    return status;
+  }
 
-	  public void setMessage(String message) {
-	    this.message = message;
-	  }
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
-	  public String getPatient_name_english() {
-	    return patient_name_english;
-	  }
+  public String getMessage() {
+    return message;
+  }
 
-	  public void setPatient_name_english(String patient_name_english) {
-	    this.patient_name_english = patient_name_english;
-	  }
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-	  public String getPatient_name_marathi() {
-	    return patient_name_marathi;
-	  }
+  public String getPatient_name_english() {
+    return patient_name_english;
+  }
 
-	  public void setPatient_name_marathi(String patient_name_marathi) {
-	    this.patient_name_marathi = patient_name_marathi;
-	  }
+  public PatientResponse setPatient_name_english(String patient_name_english) {
+    this.patient_name_english = patient_name_english;
+    return this;
+  }
 
-	  public String getMobile_number() {
-	    return mobile_number;
-	  }
+  public String getPatient_name_marathi() {
+    return patient_name_marathi;
+  }
 
-	  public void setMobile_number(String mobile_number) {
-	    this.mobile_number = mobile_number;
-	  }
+  public PatientResponse setPatient_name_marathi(String patient_name_marathi) {
+    this.patient_name_marathi = patient_name_marathi;
+    return this;
+  }
 
-	  public String getGender() {
-	    return gender;
-	  }
+  public String getMobile_number() {
+    return mobile_number;
+  }
 
-	  public void setGender(String gender) {
-	    this.gender = gender;
-	  }
+  public PatientResponse setMobile_number(String mobile_number) {
+    this.mobile_number = mobile_number;
+    return this;
+  }
 
-	  public String getBirth_date() {
-	    return birth_date;
-	  }
+  public String getGender() {
+    return gender;
+  }
 
-	  public void setBirth_date(String birth_date) {
-	    this.birth_date = birth_date;
-	  }
+  public PatientResponse setGender(String gender) {
+    this.gender = gender;
+    return this;
+  }
 
-	  public String getFirst_examination_date() {
-	    return first_examination_date;
-	  }
+  public String getBirth_date() {
+    return birth_date;
+  }
 
-	  public void setFirst_examination_date(String first_examination_date) {
-	    this.first_examination_date = first_examination_date;
-	  }
+  public PatientResponse setBirth_date(String birth_date) {
+    this.birth_date = birth_date;
+    return this;
+  }
 
-	  public String getAddress() {
-	    return address;
-	  }
+  public String getFirst_examination_date() {
+    return first_examination_date;
+  }
 
-	  public void setAddress(String address) {
-	    this.address = address;
-	  }
+  public PatientResponse setFirst_examination_date(String first_examination_date) {
+    this.first_examination_date = first_examination_date;
+    return this;
+  }
 
-	  public long getPatient_id() {
-	    return patient_id;
-	  }
+  public String getAddress() {
+    return address;
+  }
 
-	  public void setPatient_id(long patient_id) {
-	    this.patient_id = patient_id;
-	  }
+  public PatientResponse setAddress(String address) {
+    this.address = address;
+    return this;
+  }
 
-	  public static PatientResponse getInstance() {
-	    return new PatientResponse();
-	  }
+  public static PatientResponse getInstance() {
+    return new PatientResponse();
+  }
 }

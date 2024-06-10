@@ -1,6 +1,7 @@
 package org.dnyanyog.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,11 +17,12 @@ public class Patient {
 
   @GeneratedValue
   @Id
-  @Column(name = "PatientId", nullable = false, insertable = true, updatable = false)
-  private long patient_id;
+  @Column(name = "patientId", nullable = false, insertable = true, updatable = false)
+  private long patientid;
 
+  
   @Column(nullable = false, insertable = true, updatable = false, length = 50)
-  private String patient_name_english;
+  private String patientNameEnglish;
 
   @Column(nullable = false, insertable = true, updatable = false, length = 50)
   private String patient_name_marathi;
@@ -35,67 +37,90 @@ public class Patient {
 
   @Column private String address;
 
-  public long getPatient_id() {
-    return patient_id;
+  @Column private String Status;
+  
+  public static Patient getInstance() {
+	    return new Patient();
+	  }
+
+  public String getStatus() {
+    return Status;
   }
 
-  public void setPatient_id(long patient_id) {
-    this.patient_id = patient_id;
+  public void setStatus(String status) {
+    Status = status;
   }
 
-  public String getPatient_name_english() {
-    return patient_name_english;
+  public long getPatientid() {
+    return patientid;
+   
   }
 
-  public void setPatient_name_english(String patient_name_english) {
-    this.patient_name_english = patient_name_english;
+  public Patient setPatientid(long patientid) {
+    this.patientid = patientid;
+    return this;
+  }
+
+  public String getPatientNameEnglish() {
+    return patientNameEnglish;
+  }
+
+  public Patient setPatientNameEnglish(String patientNameEnglish) {
+    this.patientNameEnglish = patientNameEnglish;
+    return this;
   }
 
   public String getPatient_name_marathi() {
     return patient_name_marathi;
   }
 
-  public void setPatient_name_marathi(String patient_name_marathi) {
+  public Patient setPatient_name_marathi(String patient_name_marathi) {
     this.patient_name_marathi = patient_name_marathi;
+    return this;
   }
 
   public String getMobile_number() {
     return mobile_number;
   }
 
-  public void setMobile_number(String mobile_number) {
+  public Patient setMobile_number(String mobile_number) {
     this.mobile_number = mobile_number;
+    return this;
   }
 
   public String getGender() {
     return gender;
   }
 
-  public void setGender(String gender) {
+  public Patient setGender(String gender) {
     this.gender = gender;
+    return this;
   }
 
   public String getBirth_date() {
     return birth_date;
   }
 
-  public void setBirth_date(String birth_date) {
+  public Patient setBirth_date(String birth_date) {
     this.birth_date = birth_date;
+    return this;
   }
 
   public String getFirst_examination_date() {
     return first_examination_date;
   }
 
-  public void setFirst_examination_date(String first_examination_date) {
+  public Patient setFirst_examination_date(String first_examination_date) {
     this.first_examination_date = first_examination_date;
+    return this;
   }
 
   public String getAddress() {
     return address;
   }
 
-  public void setAddress(String address) {
+  public Patient setAddress(String address) {
     this.address = address;
+    return this;
   }
 }

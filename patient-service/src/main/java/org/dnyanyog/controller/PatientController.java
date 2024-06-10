@@ -39,6 +39,11 @@ public class PatientController {
 
   @DeleteMapping(path = "/api/v1/patient/{patient_id}")
   public PatientResponse DeletePatient(@PathVariable long patient_id) {
-    return patientService.DeletePatient(patient_id);
+    return patientService.deletePatient(patient_id);
+  }
+  @GetMapping(path = "/api/v1/case/patient/{patient_name_english}")
+  public PatientResponse getCase(@PathVariable String patient_name_english) {
+
+    return patientService.getPatientName(patient_name_english);
   }
 }
