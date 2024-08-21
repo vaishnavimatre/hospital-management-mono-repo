@@ -85,7 +85,6 @@
           </execution>
         </executions>
       </plugin>
-      <!-- Other plugins can be added here if necessary -->
     </plugins>
   </build>
 
